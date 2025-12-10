@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding-left: 10px;
+            background-color: rgb(250, 210, 222);
+        }
+        .pho{
+            display: block;
+        }
+        .box{
+            justify-content:center;
+            display: flex;
+            align-items:center;
+            text-align:center;
+            width: 350px;
+            height : auto ;
+            background-color: aquamarine;
+            padding:20px;
+            border-radius: 5px;
+            box-shadow: 8px 10px blueviolet;
+
+
+        }
+        .mess{
+            justify-content:center;
+            display: flex;
+            align-items:center;
+            text-align:center;
+            border-radius: 5px;
+            width: 300px;
+            height : auto ;
+            background-color: rgb(252, 241, 88);
+            padding:20px;
+            box-shadow: 8px 10px rgb(248, 73, 155);
+        }
+        .button{
+            width:90px;
+            height:40px;
+            line-height:42px;
+            padding:0;
+            border:none;
+            background:rgb(225,27,0);
+            background: linear-gradient(0deg, rgba(255,27,0,1) 0%,rgba(251,75,2,1) 100%);
+        }
+        .button:hover{
+            color:#f0094a;
+            background:transparent;
+            box-shadow: none;
+         }
+        .button::before,button::after{
+            content:' ';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            width:0;
+            background:#f0094a;
+            box-shadow:
+            -1px -1px 5px 0px #fff,7px 7px 20px 0px #003,4px 4px 5px 0px #0002;
+            transition:400ms ease all;
+         }
+        .button::after {
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+        }
+        .button::before, button::after{
+            width:100%;
+            transition:800ms ease all;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="pho">
+        <marquee scrollamount="10" bgColor="pink" height="200px" width="100%" 
+            hspace="0px" vspace="0px" behavior="slide" style="color:red" direction="right" font-size:100px><img src="https://uploads.onecompiler.io/445thdqsp/4473kbvyp/1000035238.jpg" height="150px" width="150px" />
+            <img src="https://uploads.onecompiler.io/445thdqsp/4473kbvyp/1000035237.jpg" height="150px" width="150px" />
+            <img src="https://uploads.onecompiler.io/445thdqsp/4473kbvyp/1000035236.jpg" height="150px" width="150px" />
+            <img src="https://uploads.onecompiler.io/445thdqsp/446pguknv/1000035579.jpg" height="150px" width="150px" />
+            <H2> Happy Birthday To You my love</H2>
+        </marquee>
+       
+        <div class="box">
+            <h1>Happy Birthday</h1>
+            <p> Wishing you the happiest birthday that brings more and more success and prosparity to you in life. Want to see you more and more happy and successful. <br>
+            Just want you to be a little kind for your closed ones and want you to see you at good place for good work and good behavoiur.</p>
+            <button onclick="mypic()" class="button">note</button>
+        </div>
+        <div class="mess">
+            <p id="demo"></p>
+        </div>
+    <script>
+        function mypic(){
+            let person = prompt("please enter ur name");
+            if (person != null){
+                document.getElementById("demo").innerHTML =
+                "Hello! " + person + " Once again Happy Birthday, I hope to see you more and more happy in life, and especially with me. I know I’ve made you sad a lot, and I truly want us to be happier together. I’m so sorry for many things I shouldn't have done. I just want to see you grow more and more, but always with me—I just don't want to lose you because I just have you and I love you and only you."
+                +" I am scared of losing you, which manifests as my insecurities and jealousy. I know, deep down, that you wouldn't leave, but that 0.0001% chance still makes me think about you thousands of times over."
+                +" I want your day to be good and memorable, and I don't know how to make that possible. Please, I request that you tell me how to do that. I just want your birthday to be special. Although you weren't able to make mine special, I look forward to you making a little more time for me—if not the whole year, at least you can make one day special just for me.";
+            }      
+        }
+    </script>
+</body>
+</html>
